@@ -1,0 +1,10 @@
+admin/auth.inc.php
+db.php
+
+*/.DS_Store
+fotky/
+guestbook/
+data/
+_dev/
+_old/
+zal/
