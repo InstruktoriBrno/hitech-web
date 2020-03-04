@@ -1,35 +1,3 @@
-<?php
-  include ("db.php");
-
-  if (isset($_POST["formular"]) && $_POST["formular"] == "Odeslat")
-  {
-    if ((empty($_POST["name"]))||(empty($_POST["mail"])))
-      $report = "<span id=\"chyba\">CHYBA! Některé z polí nebylo vyplněno!</span><br /><br />";
-    else
-    {
-      $ulozeni = mysqli_query($pspojeni, "INSERT INTO is_hitech (id,name,mail,telefon,vek,ocekavani,rok,zkmapa,zkradio,zkgps,gps,auto,odkud,strava,zdravo,tricko,vel,damske,barva) VALUES ('','${_POST["name"]}', '${_POST["mail"]}', '${_POST["telefon"]}', '${_POST["vek"]}', '${_POST["ocekavani"]}', '${_POST["rok"]}', '${_POST["zkmapa"]}', '${_POST["zkradio"]}', '${_POST["zkgps"]}', '${_POST["gps"]}', '${_POST["auto"]}', '${_POST["odkud"]}', '${_POST["strava"]}', '${_POST["zdravo"]}', '${_POST["tricko"]}', '${_POST["vel"]}', '${_POST["damske"]}', '${_POST["barva"]}')");
-/*
-      $soubor_name = ($_FILES["foto"]["name"]);
-      $soubor = ($_FILES["foto"]["tmp_name"]);
-
-
-      if ($soubor_name!="")
-      {
-        if (move_uploaded_file($soubor, "./fotky/$_POST[name].jpg"))
-        {
-          chmod ("./fotky/$soubor_name", 0646);
-  //        echo "<b>Soubor $soubor_name byl nahran na server</b><BR>";
-        }
-        else
-        {
-          echo "<b>Chyba - soubor nebyl nahran</b><BR>";
-        }
-      }   */
-    $report = "<span id=\"ok\">Přihlášení bylo úspěšné.</span><br /><br />";
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -38,7 +6,7 @@
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HiTech 2018</title>
+    <title>HiTech 2020</title>
     <meta name="description" content="Víkend zaměřený na orientaci a pohyb v terénu.">
     <meta name="keywords" content="orientace, mapa, buzola, vysilacky, OB">
     <meta name="author" content="">
@@ -111,7 +79,7 @@
         <div class="overlay">
             <div class="content">
                 <p class="lead">Chceš zažít zajímavé aktivity s využitím OB, ROB, GPS či PMR?<br />Baví tě orientační běh?</p>
-                <h1>Pojeď na <span class="color">HiTech</span> !<br />20. - 22. 4. 2018</h1>
+                <h1>Pojeď na <span class="color">HiTech</span> !<br />24. - 26. 4. 2020</h1>
                 <p class="intro">
                 <br /><br />
                   ... orientace, bloudění, mapa, tajná cesta, buzola, Severka, GPS, světlo, tma, čelovka, vybité baterky, <br />špatný signál, louč, akumulátory, karbid, nebezpečná operace, podezřelá zásilka, radiostanice, směrová anténa, <br />odraz v údolí, liška, stěhovaví ptáci, oči ve tmě, běh, plížení, hrubá síla, dobrý nápad, dostatek jídla, fajn parta, trocha spánku, Instruktoři...</p>
@@ -131,7 +99,7 @@
                 <div class="col-md-6">
                     <div class="about-text">
                         <div class="section-title">
-                            <h2><strong>Co je to HiTech</strong></h2>
+                            <h2><strong>Co je to HiTech?</strong></h2>
                             <hr>
                             <div class="clearfix"></div>
                         </div>
@@ -139,9 +107,9 @@
                           Projekt HiTech se skládá ze třech víkendových akcí - HiTech, HiTech+ a HiTech Z. Každý rok na jaře pořádáme některý z těchto HiTechů.<br />
                           <br />
                           <strong>HiTech</strong><br />
-                          HiTech vznikl v roce 1998. Motivaci bylo seznámit a procvičit účastníky, zejména z řad instruktorů brno, v používáním technických zařízení (hlavně mapy, buzoly a radiostanic) při organizací programu v terénu. Z vikendovky se stala akce tradiční, později k tématům přibyla práce s GPS. HiTech nepredpokládá žádné předchozí znalosti. Účastníci se vše naučí, vyzkouší a procvičí od začátku. Klasických přednášek je minimum, vetšina programů se odehrává venku, formou tréningu, závodu a her.<br />
+                          HiTech vznikl v roce 1998. Motivaci bylo seznámit a procvičit účastníky, zejména z řad instruktorů brno, v používáním technických zařízení (hlavně mapy, buzoly a radiostanic) při organizací programu v terénu. Z vikendovky se stala akce tradiční, později k tématům přibyla práce s GPS. HiTech nepredpokládá žádné předchozí znalosti. Účastníci se vše naučí, vyzkouší a procvičí od začátku. Klasických přednášek je minimum, vetšina programů se odehrává venku, formou tréninku, závodů a her.<br />
                           <br />
-                          Program akce se postupně vylepšuje, ale jeho základ zůstává stejný. Nemá tedy velký smysl jezdit na akci opakovaně. Z tohoto důvodu vznik v roce 2011 HiTech+.<br />
+                          Program akce se postupně vylepšuje, ale jeho základ zůstává stejný. Nemá tedy velký smysl jezdit na akci opakovaně. Z tohoto důvodu vznikl v roce 2011 HiTech+.<br />
                           <br />
                           <strong>HiTech+</strong><br />
                           Hitech+ navazuje na témata HiTechu, jeho cílem je vyzkoušet si limity práce s technikou. Na jak velkou vzdálenost se dovolám s vysílačkou? Jak přesně zaměřím vysílač?, jak rychle, jak moc věcí současně, ...? Pro účast není podmínkou mít absolvovaný základní HiTech. Stačí úplně základní znalost práce s mapou.<br />
@@ -168,19 +136,19 @@
                         <ul class="about-list">
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                <strong>St 28. 2. 2018</strong> - poslední termín pro odeslání přihlášky.
+                                <strong>Ne 29. 3. 2020</strong> - poslední termín pro odeslání přihlášky.
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                <strong>St 14. 3. 2018</strong> - poslední termín pro zaplacení
+                                <strong>Út 31. 3. 2020</strong> - poslední termín pro připsání platby na účet
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                <strong>Čt 15. 3. 2018</strong> - oslovení náhradníků
+                                <strong>St 1. 4. 2020</strong> - oslovení náhradníků
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                <strong>Pá 20. 4. 2018</strong> v 18:00 v blízkosti Poličky - začátek HiTech (předpokládaný odjezd autem z Brna kolem 16. hod.)
+                                <strong>Pá 24. 4. 2020</strong> v 19:00 na <a href="https://mapy.cz/s/hemosabaka" target="_blank">základně Čachnov</a> (předpokládaný příjezd autem nebo vlakem v 18:00 do Pusté Kamenice)
                             </li>
                         </ul>
                         <br /><br />
@@ -189,14 +157,15 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">Cena akce je <strong>990,- Kč</strong> a zahrnuje ubytování, stravu a nezbytné náklady na techniku, zařízení a dobré počasí.</p>
+                        <p class="intro">Cena akce je <strong>990,- Kč</strong> a zahrnuje ubytování, stravu a nezbytné náklady na techniku, zařízení a dobré počasí.<br /><br />
+                        Je také možné si objednat tričko za <strong>150,- Kč</strong> (objednávky v přihlašovacím formuláři).</p>
                         <br /><br />
                         <div class="section-title">
                             <h2><strong>Místo konání a strava</strong></h2>
                             <hr>
                             <div class="clearfix"></div>
                             </div>
-                        <p class="intro">Vysočina. Spát se bude ve vlastním spacáku. Veškerou stravu zajišťují organizátoři.</p>
+                        <p class="intro"><a href="https://mapy.cz/s/hemosabaka" target="_blank">Základna Čachnov</a> a okolí, spaní ve vlastním spacáku. Stravu dostanete od nás, ale nějaká svačinka na doplnění energie se nikdy neztratí.</p>
                         <br /><br />
                     </div>
                 </div>
@@ -212,17 +181,16 @@
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">Podmínkou účasti je věk alespoň 18 let.<br />
-          Přednost mají účastníci, kteří na HiTech jedou poprvé.</p>
+                        <p class="intro">Podmínkou účasti je věk alespoň 18 let.<br /><br />
+          Přednost mají účastníci, kteří na HiTech jedou poprvé a účastníci Instruktorského kurzu 2019/2020.</p>
                         <br /><br />
                         <div class="section-title">
                             <h2><strong>Doprava</strong></h2>
                             <hr>
                             <div class="clearfix"></div>
+                            <p class="intro">Na akci lze dorazit autem nebo vlakem do Pusté Kamenice a pak cca 2km pěšky. Vlak přijíždí v pátek v 18:00, což by mělo krásně vycházet.<br /><br />
+                            Program bude končit tak, abyste v neděli stihli vlak v 17:04 z Pusté Kamenice.</p>
                         </div>
-                        <p class="intro">Vzhledem ke špatné dopravní dostupnosti základny (vlak, autobus) je výhodné, aby se účastníci již před odjezdem domluvili na dopravě na akci auty.<br /><br />
-V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo jede odkud. Před akcí vám v případě potřeby zprostředkujeme kontakty na řidiče.<br /><br />
-<br /><br /><br />
                     </div>
                 </div>
             </div>
@@ -245,11 +213,11 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                ešus + lžíce
+                                jídelní miska a lžíce
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                oblečení a obutí do terénu - je třeba počítat s delším pobytem venku.
+                                oblečení a obutí do terénu - je třeba počítat s delším pobytem venku
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
@@ -277,7 +245,7 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                PET láhev nebo termoska na pití
+                                láhev nebo termoska na pití
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
@@ -297,7 +265,7 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
-                                tenký červený fix (lihový, vodou nesmývatelný, permanent) - např. <A HREF="http://www.centropen.cz/katalog-produktu/pro-kancelar/13-3-ohp--pro-zpetnou-projekci/41-ohp-permanent" target="_blank">Centropen&nbsp;2636&nbsp;OHP PERMANENT</A>
+                                tenký červený fix (lihový, vodou nesmývatelný, permanent) - např. <a href="http://www.centropen.cz/katalog-produktu/pro-kancelar/13-3-ohp--pro-zpetnou-projekci/41-ohp-permanent" target="_blank">Centropen&nbsp;2636&nbsp;OHP PERMANENT</a>
                             </li>
                         </ul>
                         <br />
@@ -310,10 +278,6 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                             <li>
                                 <span class="fa fa-bullseye"></span>
                                 kalkulačka
-                            </li>
-                            <li>
-                                <span class="fa fa-bullseye"></span>
-                                GPS - (kdo má)
                             </li>
                             <li>
                                 <span class="fa fa-bullseye"></span>
@@ -336,136 +300,11 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
             <div class="container">
                 <div class="section-title center">
                     <h2><strong>Přihláška</strong></h2>
-                    <br />Přihlašování na HiTech probíhá prostřednictvím této stránky. Ti, kteří se tímto formulářem přihlásí mezi prvními 32, mohou uhradit účastnický poplatek. Zájemci přihlášení přes počet se stávají náhradníky. Pokud od přihlášených účastníků neobdržíme na účet organizátorů účastnický poplatek do stanoveného termínu, budou jejich místa nabídnuta náhradníkům.
+                    <br />Přihlašování na HiTech pro všechny se otevře 11. 3. 2020, do té doby je otevřeno přednostně instruktorskému kurzu 2019/2020. Ti, kteří se tímto formulářem přihlásí mezi prvními 32, mohou uhradit účastnický poplatek, ostatní se stávají náhradníky. . Pokud od přihlášených účastníků neobdržíme na účet organizátorů účastnický poplatek do 31. 3. 2020, budou jejich místa nabídnuta náhradníkům.
                     <div class="line">
                         <hr>
                     </div>
                 </div>
-
-                <form action="index.php#tf-services" method="post" ENCTYPE="multipart/form-data">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="jmeno">Jméno a příjmení</label>
-                                <input type="text" class="form-control" id="jmeno" name="name" placeholder="">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="vek">Věk</label>
-                                <input type="texy" class="form-control" id="vek" name="vek" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="email" name="mail" placeholder="@">
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="telefon">Telefonní číslo</label>
-                                <input type="text" class="form-control" id="telefon" name="telefon" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="ocekavani">Co od HiTechu očekáváš?</label>
-                        <textarea class="form-control" id="ocekavani" name="ocekavani" rows="2"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="rok">Byl/a jsi už někdy na HiTechu?</label>
-                        <textarea class="form-control" id="rok" name="rok" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="rok">Popiš svoje zkušenosti s orientací a prací s mapou a buzolou:</label>
-                        <textarea class="form-control" id="zkmapa" name="zkmapa" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="rok">Popiš svoje zkušenosti s použitím radiostanic:</label>
-                        <textarea class="form-control" id="zkradio" name="zkradio" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="rok">Popiš svoje zkušenosti s navigačním systémem GPS:</label>
-                        <textarea class="form-control" id="zkgps" name="zkgps" rows="1"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="gps">Vlastníš GPS, resp. můžeš si ji půjčit a přivézt na HiTech? Pokud ano, tak jakou?</label>
-                        <textarea class="form-control" id="gps" name="gps" rows="1"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="auto">Vlastníš auto, resp. můžeš s ním na HiTech přijet?</label>
-                                <select class="form-control" id="auto" name="auto" placeholder="@">
-                                    <option value="1">Ano
-                                    <option value="0" selected>Ne
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="odkud">Odkud na HiTech pojedeš?</label>
-                                <input type="text" class="form-control" id="odkud" name="odkud" placeholder="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="strava">Máš nějaká stravovací omezení? (např.: vegetarianství, alergie apod.)</label>
-                        <textarea class="form-control" id="strava" name="strava" rows="2"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="zdravo">Máš nějaká zdravotní omezení?</label>
-                        <textarea class="form-control" id="zdravo" name="zdravo" rows="2"></textarea>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="jmeno">V případě, že se HiTechu zúčastníš, měl bys zájem o tričko s logem za příplatek <strong>150Kč</strong>?</label>
-                                <select class="btn form-control" id="tricko" name="tricko" placeholder="">
-						                        <option value="0">Ne
-						                        <option value="1">Ano
-						                    </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="vel"><br />Pokud ano, tak jakou velikost?</label>
-                                <select class="btn form-control" id="vel" name="vel" placeholder="">
-                        						<option value="L"> L
-                        						<option value="S"> S
-                        						<option value="M"> M
-                        						<option value="XL"> XL
-                        						<option value="XXL"> XXL
-						                    </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="barva"><br />A jakou barvu?</label>
-                                <select class="btn form-control" id="barva" name="barva" placeholder="">
-                        						<option value="C"> Černá
-                        						<option value="M"> Modrá
-                        						<option value="Z"> Zelená
-                    						</select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                <label for="damske"><br />Dámské/Pánské</label>
-                                <select class="btn form-control" id="damske" name="damske" placeholder="">
-						                        <option value="0">Pánské
-						                        <option value="1">Dámské
-						                    </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn tf-btn btn-default" name="formular" value="Odeslat">Odeslat</button>
-                </form>
-
             </div>
         </div>
     </div>
@@ -485,60 +324,7 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                             <hr>
                             <div class="clearfix"></div>
                         </div>
-                        <p class="intro">
-<?php
-			  if (isset($report)) {
-				  echo "$report";
-			  }
-                          $res = mysqli_query($pspojeni, "SELECT id,name,auto,odkud FROM is_hitech WHERE status>0 AND status<5 ORDER BY id");
-			  $poradi = 0;
-                          while ($r = mysqli_fetch_array($res))
-                          {
-                            $poradi=$poradi+1;
-                            if ($poradi == 33)
-                            	echo "<hr>";
-
-                            if (strlen($poradi) == 1)
-                              $poradi = "0".$poradi;
-
-                            if ($r["auto"] == 1)
-                            	$a = ". Na akci bere auto.";
-                            else
-                            	$a = "";
-
-                            if ($r["auto"]) echo "<span class=\"auto\">";
-              							echo "$poradi. ${r["name"]} (${r["odkud"]}$a)<br />";
-              							if ($r["auto"]) echo "</span>";
-                        	}
-
-                        	echo "<br /><div class=\"section-title\">
-                                  <h2><strong>Náhradníci</strong></h2>
-                                  <hr>
-                                  <div class=\"clearfix\"></div>
-                                </div>
-                                <p class=\"intro\">
-                          ";
-                        	echo "<i>Seznam náhradníků. Budou přijati v případě, že se odhlásí někdo z již přihlášených lidí</i>.<br /><br />";
-                        	$res = mysqli_query($pspojeni,"SELECT id,name,auto,odkud FROM is_hitech WHERE status=5 ORDER BY id");
-                          while ($r = mysqli_fetch_array($res))
-                          {
-                            $poradi=$poradi+1;
-                            if (strlen($poradi) == 1)
-                              $poradi = "0".$poradi;
-
-                            if ($r["auto"] == 1)
-                            	$a = ". Na akci bere auto.";
-                            else
-                            	$a = "";
-
-                            if ($r["auto"]) echo "<span class=\"auto\">";
-              							echo "$poradi. ${r["name"]} (${r["odkud"]}$a)<br />";
-              							if ($r["auto"]) echo "</span>";
-                        	}
-
-?>
-
-                        </p>
+                            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0AHLY94Xccbc7i7j4HNFUOHoTnxeAF75u5GjseC5BMArFaHiRQtlcxISqDKtm9OEi9vpSEFWnPw6f/pubhtml?gid=1209469545&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
                     </div>
                 </div>
             </div>
@@ -558,7 +344,7 @@ V seznamu přihlášených bude označeno, kdo jede na akci autem a také kdo je
                     </div>
                 </div>
 
-                <p class="intro">Vaše případné dotazy ráda zodpoví Lenka:<br />lenka.raudenska@gmail.com<br />
+                <p class="intro">Vaše případné dotazy rádi zodpovíme na emailu:<br /><a href="mailto:hitech@instruktori.cz">hitech@instruktori.cz</a><br />
                 <br />
                 <p class="intro">Teší se na vás celý organizátorský tým ve složení:<br />
                 <br />
@@ -571,7 +357,8 @@ Bohdan Růžička<br />
 Petr Matula<br />
 Petr Ladin Ženožička<br />
 Lenka Raudenská<br />
-Tom Látal</p>
+Tom Látal<br />
+Martin Kulda Kulich</p>
 <br /><br /><br />
 <p>
  <img src="img/lcr.png">&emsp;Konání akce umožnil podnik Lesy České republiky, s.p.
@@ -592,9 +379,6 @@ Tom Látal</p>
                   <ul class="footer-social">
                     <li><a target="_bank" href="https://www.facebook.com/instruktori.brno"><i class="fa fa-facebook"></i></a></li>
                     <li><a target="_bank" href="http://www.instruktori.cz">Instruktoři Brno</a></li>
- <!--                   <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>                                       -->
                 </ul>
 
             </div>
