@@ -36,7 +36,7 @@ p{
 }
 p.intro{
 	font-size: 16px;
-	margin: 12px 0 0;
+	margin: 0 0 12px;
 	line-height: 24px;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -50,6 +50,7 @@ a:focus{
 .section-title hr{
 	border-color: #fcac45;
 	border-width: 4px;
+	margin-bottom: 10px;
 	width: 60px;
 	float: left;
 	clear: both;
@@ -168,7 +169,6 @@ a.fa.fa-angle-down:hover{
 #tf-about{
 	padding: 80px 0;
 }
-ul.about-list{ margin: 30px 0 0 ;}
 ul.about-list li{
 	display: block;
 	font-size: 16px;
@@ -199,6 +199,9 @@ ul.about-list li span{
 	height: auto;
 	background-attachment: fixed;
 	padding: 80px 0;
+}
+.section-title {
+	margin: 30px 0 0;
 }
 .section-title.center{
 	padding: 30px 0;
